@@ -5,6 +5,6 @@ const ALWAYS_ON_TOP_EVENT = "Local\\AlwaysOnTopPinEvent-892e0aa2-cfa8-4cc4-b196-
 
 export default async function Command() {
   await closeMainWindow();
-  triggerPowerToysEvent(ALWAYS_ON_TOP_EVENT, "Always on Top");
+  await triggerPowerToysEvent(ALWAYS_ON_TOP_EVENT, "Always on Top");
   return null;
 }

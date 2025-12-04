@@ -1,18 +1,15 @@
-import { execSync } from "child_process";
+import { runPowerShellScript } from "@raycast/utils";
 
 /**
- * Triggers a PowerToys Windows event using inline PowerShell command
+ * Triggers a PowerToys Windows event using Raycast's PowerShell utility
  */
-export function triggerPowerToysEvent(eventName: string, toolName: string): void {
+export async function triggerPowerToysEvent(eventName: string, toolName: string): Promise<void> {
   try {
     const psCommand = `[System.Threading.EventWaitHandle]::OpenExisting('${eventName}').Set()`;
 
     console.log(`Triggering ${toolName}...`);
 
-    execSync(`powershell.exe -NoProfile -Command "${psCommand}"`, {
-      encoding: "utf-8",
-      stdio: "pipe",
-      windowsHide: true,
+    await runPowerShellScript(psCommand, {
       timeout: 5000,
     });
 

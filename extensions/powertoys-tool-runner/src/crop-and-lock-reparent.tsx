@@ -5,6 +5,6 @@ const CROP_AND_LOCK_REPARENT_EVENT = "Local\\PowerToysCropAndLockReparentEvent-6
 
 export default async function Command() {
   await closeMainWindow();
-  triggerPowerToysEvent(CROP_AND_LOCK_REPARENT_EVENT, "Crop and Lock - Reparent");
+  await triggerPowerToysEvent(CROP_AND_LOCK_REPARENT_EVENT, "Crop and Lock - Reparent");
   return null;
 }

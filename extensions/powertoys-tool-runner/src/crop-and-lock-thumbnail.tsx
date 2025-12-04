@@ -5,6 +5,6 @@ const CROP_AND_LOCK_THUMBNAIL_EVENT = "Local\\PowerToysCropAndLockThumbnailEvent
 
 export default async function Command() {
   await closeMainWindow();
-  triggerPowerToysEvent(CROP_AND_LOCK_THUMBNAIL_EVENT, "Crop and Lock - Thumbnail");
+  await triggerPowerToysEvent(CROP_AND_LOCK_THUMBNAIL_EVENT, "Crop and Lock - Thumbnail");
   return null;
 }
