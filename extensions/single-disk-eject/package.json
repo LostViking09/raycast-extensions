@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "@raycast/api": "^1.25.4",
-    "@raycast/utils": "^1.25.4"
+    "@raycast/utils": "^2.2.1"
   },
   "devDependencies": {
     "@types/node": "~16.10.0",
