@@ -1,4 +1,4 @@
-import { runPowerShellScript } from "@raycast/utils";
+import { runPowerShellScript, showFailureToast } from "@raycast/utils";
 
 /**
  * Triggers a PowerToys Windows event using Raycast's PowerShell utility
@@ -16,5 +16,8 @@ export async function triggerPowerToysEvent(eventName: string, toolName: string)
     console.log(`${toolName} triggered successfully`);
   } catch (error) {
     console.error(`${toolName} launch failed:`, error);
+    await showFailureToast(error, {
+      title: `Failed to launch ${toolName}`,
+    });
   }
 }
