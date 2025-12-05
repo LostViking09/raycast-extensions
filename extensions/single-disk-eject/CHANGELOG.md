@@ -1,5 +1,10 @@
 # Single Disk Eject Changelog
 
+## [Windows Support] {PR_MERGE_DATE}
+
+- Added windows support with RemoveDrive
+  - [RemoveDrive website](https://www.uwe-sieber.de/drivetools_e.html)
+
 ## [Bug Fix] 2023-11-10
 
 - Fixed bug that incorrectly reported a disk as ejected when it was not.
